@@ -46,8 +46,21 @@ const ogImageURL = new URL('/tj-og-image.png', canonicalURL);
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Netlify Identity redirect script for Decap CMS -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" is:inline></script>
   </head>
   <body class="min-h-screen bg-background text-foreground antialiased" style="font-family: 'DM Sans', system-ui, sans-serif;">
     <slot />
+    <script is:inline>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", (user) => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
   </body>
 </html>

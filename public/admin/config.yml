@@ -1,7 +1,6 @@
 backend:
-  name: github
-  repo: your-github-username/your-repo-name # <-- Update this with your actual GitHub repo details
-  branch: main
+  name: git-gateway
+  branch: master
 
 media_folder: "public/imports"
 public_folder: "/imports"
