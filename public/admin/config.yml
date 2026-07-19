@@ -1,0 +1,40 @@
+backend:
+  name: github
+  repo: your-github-username/your-repo-name # <-- Update this with your actual GitHub repo details
+  branch: main
+
+media_folder: "public/imports"
+public_folder: "/imports"
+
+# Tells Sveltia to use Netlify Identity for easy user management
+local_backend: true
+
+collections:
+  - name: "pages"
+    label: "Website Pages"
+    delete: false # Prevents non-devs from accidentally deleting structural pages
+    editor:
+      preview: false # Disables the heavy rendering iframe for a cleaner, faster editor
+    files:
+      - file: "src/data/homepage.json"
+        label: "Homepage Content"
+        name: "homepage"
+        fields:
+          - { label: "Tagline", name: "tagline", widget: "string" }
+          - { label: "Hero Title", name: "heroTitle", widget: "string" }
+          - { label: "Hero Biography Text", name: "heroBio", widget: "text" }
+          - { label: "CTA Button Text", name: "ctaButtonText", widget: "string" }
+          - { label: "Bio Section Title", name: "bioTitle", widget: "string" }
+          - { label: "Bio Paragraph One", name: "bioParagraph1", widget: "text" }
+          - { label: "Bio Paragraph Two", name: "bioParagraph2", widget: "text" }
+          - { label: "Bio Paragraph Three", name: "bioParagraph3", widget: "text" }
+          - { label: "Contact CTA Title", name: "ctaSectionTitle", widget: "string" }
+          - { label: "Contact CTA Description", name: "ctaSectionBody", widget: "text" }
+
+      - file: "src/data/privacy.json"
+        label: "Privacy Policy Page"
+        name: "privacy"
+        fields:
+          - { label: "Document Title", name: "title", widget: "string" }
+          - { label: "Effective Date", name: "effectiveDate", widget: "string" }
+          - { label: "Policy Body Content", name: "content", widget: "text" }

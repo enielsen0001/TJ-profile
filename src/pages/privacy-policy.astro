@@ -1,0 +1,32 @@
+---
+import '../styles/global.css';
+import privacyContent from '../data/privacy.json';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{privacyContent.title} · Tiffany Jones</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-background text-foreground antialiased" style="font-family: 'DM Sans', system-ui, sans-serif;">
+
+    <main class="max-w-2xl mx-auto px-6 py-16 md:py-24">
+      <a href="/" class="text-sm font-medium text-accent hover:underline inline-flex items-center gap-1 mb-8">
+        ← Back to Home
+      </a>
+
+      <h1 class="text-3xl font-semibold tracking-tight text-primary mb-2" style="font-family: 'Crimson Pro', Georgia, serif;">
+        {privacyContent.title}
+      </h1>
+      <p class="text-xs text-muted-foreground mb-8">Effective Date: {privacyContent.effectiveDate}</p>
+
+      <div class="prose max-w-none text-base text-foreground/80 leading-relaxed space-y-6">
+        <p>{privacyContent.content}</p>
+      </div>
+    </main>
+
+  </body>
+</html>
