@@ -38,3 +38,14 @@ collections:
           - { label: "Document Title", name: "title", widget: "string" }
           - { label: "Effective Date", name: "effectiveDate", widget: "string" }
           - { label: "Policy Body Content", name: "content", widget: "text" }
+
+      - file: "src/data/siteConfig.json"
+        label: "Global Site Settings"
+        name: "site_config"
+        fields:
+          - { label: "Production Domain URL", name: "siteUrl", widget: "string", description: "The full live URL of the site, e.g., https://yourdomain.com" }
+          - { label: "Agent Full Name", name: "agentName", widget: "string" }
+          - { label: "Display Phone Number", name: "phoneNumber", widget: "string" }
+          - { label: "Click-to-Call Link Value", name: "phoneDialStr", widget: "string", description: "Formatted without spaces for mobile dialing, e.g., tel:+15551234567" }
+          - { label: "Contact Email Address", name: "emailAddress", widget: "string" }
+          - { label: "License Status Footnote", name: "licenseScope", widget: "string" }

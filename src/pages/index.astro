@@ -9,23 +9,15 @@ import {
 } from '@lucide/astro';
 import '../styles/global.css';
 import content from '../data/homepage.json';
+import Layout from '../layouts/Layout.astro';
 
 // Assets pathing mapping
 const headshotImage = "/imports/t-jones-lg.png";
 const signatureImage = "/imports/t-jones-88.png";
 ---
 
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tiffany Jones · Life Insurance Specialist</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-  </head>
-  <body class="min-h-screen bg-background text-foreground antialiased" style="font-family: 'DM Sans', system-ui, sans-serif;">
+
+<Layout title="Tiffany Jones · Life Insurance Specialist">
 
     <!-- ── HEADER ── -->
     <header id="main-header" class="sticky top-0 z-50 transition-all duration-300 bg-transparent">
@@ -188,5 +180,4 @@ const signatureImage = "/imports/t-jones-88.png";
         }
       }, { passive: true });
     </script>
-  </body>
-</html>
+  </Layout>

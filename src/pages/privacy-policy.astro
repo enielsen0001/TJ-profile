@@ -1,19 +1,11 @@
 ---
 import '../styles/global.css';
 import privacyContent from '../data/privacy.json';
+import Layout from '../layouts/Layout.astro';
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{privacyContent.title} · Tiffany Jones</title>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-  </head>
-  <body class="bg-background text-foreground antialiased" style="font-family: 'DM Sans', system-ui, sans-serif;">
-
-    <main class="max-w-2xl mx-auto px-6 py-16 md:py-24">
+<Layout title={`${privacyContent.title} · Tiffany Jones`} description="Privacy policy disclosures for Tiffany Jones financial consulting site.">
+  <main class="max-w-2xl mx-auto px-6 py-16 md:py-24">
       <a href="/" class="text-sm font-medium text-accent hover:underline inline-flex items-center gap-1 mb-8">
         ← Back to Home
       </a>
@@ -28,5 +20,4 @@ import privacyContent from '../data/privacy.json';
       </div>
     </main>
 
-  </body>
-</html>
+</Layout>
