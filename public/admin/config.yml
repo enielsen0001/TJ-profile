@@ -5,7 +5,6 @@ backend:
 media_folder: "public/imports"
 public_folder: "/imports"
 
-# Tells Sveltia to use Netlify Identity for easy user management
 local_backend: true
 
 collections:
@@ -22,14 +21,25 @@ collections:
           - { label: "Tagline", name: "tagline", widget: "string" }
           - { label: "Hero Title", name: "heroTitle", widget: "string" }
           - { label: "Hero Biography Text", name: "heroBio", widget: "text" }
-          - { label: "CTA Button Text", name: "ctaButtonText", widget: "string" }
+          - { label: "Hero Button Text", name: "ctaButtonText", widget: "string" }
           - { label: "Bio Section Title", name: "bioTitle", widget: "string" }
           - { label: "Bio Paragraph One", name: "bioParagraph1", widget: "text" }
           - { label: "Bio Paragraph Two", name: "bioParagraph2", widget: "text" }
           - { label: "Bio Paragraph Three", name: "bioParagraph3", widget: "text" }
-          - { label: "Contact CTA Title", name: "ctaSectionTitle", widget: "string" }
-          - { label: "Contact CTA Description", name: "ctaSectionBody", widget: "text" }
-
+          - { label: "Contact Title", name: "ctaSectionTitle", widget: "string" }
+          - { label: "Contact Intro Text", name: "ctaSectionBody", widget: "text" }
+          - { label: "Contact Schedule Link", name: "ctaScheduleLink", widget: "string" }
+          - { label: "Contact Telephone Text", name: "ctaTelText", widget: "string" }
+          - { label: "Contact Telephone Link", name: "ctaTelLink", widget: "string" }
+          - { label: "Trust Bar Card 1 Title", name: "trustBarCard1Title", widget: "string" }
+          - { label: "Trust Bar Card 1 Subtitle", name: "trustBarCard1Subtitle", widget: "string" }
+          - { label: "Trust Bar Card 1 Body", name: "trustBarCard1Body", widget: "text" }
+          - { label: "Trust Bar Card 2 Title", name: "trustBarCard2Title", widget: "string" }
+          - { label: "Trust Bar Card 2 Subtitle", name: "trustBarCard2Subtitle", widget: "string" }
+          - { label: "Trust Bar Card 2 Body", name: "trustBarCard2Body", widget: "text" }
+          - { label: "Trust Bar Card 3 Title", name: "trustBarCard3Title", widget: "string" }
+          - { label: "Trust Bar Card 3 Subtitle", name: "trustBarCard3Subtitle", widget: "string" }
+          - { label: "Trust Bar Card 3 Body", name: "trustBarCard3Body", widget: "text" }
       - file: "src/data/privacy.json"
         label: "Privacy Policy Page"
         name: "privacy"
@@ -43,7 +53,7 @@ collections:
         name: "site_config"
         fields:
           - { label: "Production Domain URL", name: "siteUrl", widget: "string", description: "The full live URL of the site, e.g., https://yourdomain.com" }
-          - { label: "Agent Full Name", name: "agentName", widget: "string" }
+          - { label: "Full Name", name: "agentName", widget: "string" }
           - { label: "Display Phone Number", name: "phoneNumber", widget: "string" }
           - { label: "Click-to-Call Link Value", name: "phoneDialStr", widget: "string", description: "Formatted without spaces for mobile dialing, e.g., tel:+15551234567" }
           - { label: "Contact Email Address", name: "emailAddress", widget: "string" }
