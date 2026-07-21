@@ -5,7 +5,7 @@ backend:
 media_folder: "public/imports"
 public_folder: "/imports"
 
-local_backend: true
+local_backend: false
 
 collections:
   - name: "pages"
